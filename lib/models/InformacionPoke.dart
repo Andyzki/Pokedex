@@ -6,7 +6,8 @@ import 'package:pokedex/models/Pokemon.dart';
 class pokeInfo extends StatefulWidget {
   final String nombre;
   final String imagen;
-  const pokeInfo({Key? key, this.nombre = "", this.imagen = ""})
+  final int id;
+  const pokeInfo({Key? key, this.nombre = "", this.imagen = "", this.id = 0})
       : super(key: key);
 
   @override
@@ -60,17 +61,26 @@ class informacionPokemon extends State<pokeInfo> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text("VERSION SHINY ",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.grey[400])),
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.grey[400])),
                         Row(
-                          children: [],
-                        )
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${widget.id}.png"),
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${widget.id}.png"),
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${widget.id}.png"),
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${widget.id}.png")
+                          ],
+                        ),
                       ],
                     )),
               ),
             ],
-          )
-          ),
+          )),
     );
   }
 }

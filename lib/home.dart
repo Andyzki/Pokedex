@@ -119,7 +119,7 @@ class _homePageState extends State<homePage> {
                   builder: (context) => pokeInfo(
                         nombre: nom,
                         imagen: "https://pokefanaticos.com/pokedex/assets/images/pokemon_imagenes/${index+1}.png",
-                      //id: index+1,
+                        id: index+1,
                       )));
         },
       ))));

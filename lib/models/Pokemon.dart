@@ -3,8 +3,9 @@ class Pokemon{
   String url ="";
   int id;
 
-  Pokemon(nombre, url, this.id){
-    this.nombre=nombre;
-    this.url=url;
+ Pokemon({required this.nombre, required this.id,});
+
+  Map<String, dynamic> toMap() {
+    return {'name': nombre, 'id': id};
   }
 }
