@@ -66,7 +66,7 @@ class _homePageState extends State<homePage> {
             final List<String> pokemones = pokemon2.split(',');
             print(pokemon2);
             return GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: 1,
               children: pokemonList(pokemones),
             );
           } else if (snapshot.hasError) {
