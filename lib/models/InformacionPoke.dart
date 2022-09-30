@@ -60,18 +60,9 @@ class informacionPokemon extends State<pokeInfo> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("VERSION SHINY ",
+                        Text("Versiones Normal & Shiny",
                             style: TextStyle(
                                 fontSize: 20, color: Colors.grey[400])),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.network(
-                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${widget.id}.png"),
-                            Image.network(
-                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${widget.id}.png")
-                          ],
-                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -79,6 +70,15 @@ class informacionPokemon extends State<pokeInfo> {
                                 "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${widget.id}.png"),
                             Image.network(
                                 "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${widget.id}.png")
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${widget.id}.png"),
+                            Image.network(
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${widget.id}.png")
                           ],
                         ),
                       ],
