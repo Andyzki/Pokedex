@@ -7,7 +7,7 @@ import 'package:pokedex/models/Pokemon.dart';
 List<String> poke = [];
 List<int> code = [];
 String nombre = "";
-int id = 0;
+int ids = 0;
 
 class homePage extends StatefulWidget {
   static const String route = "/home";
@@ -31,9 +31,11 @@ class _homePageState extends State<homePage> {
 
       for (var item in jsonData["results"]) {
         nombre = item["name"];
-        id += 1;
-        code.add(id);
+        ids += 1;
+
         poke.add(nombre);
+        code.add(ids);
+        
       }
     } else {
       throw Exception("Fallo la Conexion");
@@ -66,7 +68,7 @@ class _homePageState extends State<homePage> {
             final List<String> pokemones = pokemon2.split(',');
             print(pokemon2);
             return GridView.count(
-              crossAxisCount: 1,
+              crossAxisCount: 2,
               children: pokemonList(pokemones),
             );
           } else if (snapshot.hasError) {
